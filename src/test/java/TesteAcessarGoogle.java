@@ -1,3 +1,4 @@
+import org.apache.commons.codec.StringEncoder;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -11,6 +12,10 @@ public class TesteAcessarGoogle {
         open("http://google.com");
         $(By.name("q")).setValue("Selenide");
         $(By.name("btnK")).click();
+        $(By.cssSelector("#rso > div:nth-child(1) > div:nth-child(1) > div > div.yuRUbf > a")).click();
+        String Titulo = $(By.tagName("title")).getText();
+
+
     }
 
 }
